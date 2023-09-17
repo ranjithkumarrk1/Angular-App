@@ -22,7 +22,7 @@ FROM nginx:latest-alpine
 
 ARG WORK_DIR
 
-COPY --from=builder ${WORK_DIR}/dist/angular-crash /usr/share/nginx/html
+COPY --from=builder ${WORK_DIR}/dist/angular-app /usr/share/nginx/html
 
 COPY ./nginx/nginx.conf /etc/nginx/conf.d/default.conf
 
